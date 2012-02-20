@@ -273,6 +273,7 @@ window.onload=function()
 	nl9.push(node9);
 	nl9.push(node10);
 	var t9 = new $traveler(208,121, nl9, 9, 211, 116);
+	travelers.push(t9);
 	
 	var nl10 = [];
 	nl10.push(new vector(156,125));
@@ -285,7 +286,23 @@ window.onload=function()
 	nl10.push(node9);
 	nl10.push(node10);
 	var t10 = new $traveler(156,109,nl10,10,152,93);
+	travelers.push(t10);
 	
+	var nl11 = [];
+	nl11.push(new vector(200,162));
+	nl11.push(new vector(288,162));
+	nl11.push(new vector(288,110));
+	nl11.push(node7);
+	nl11.push(node8);
+	nl11.push(node9);
+	nl11.push(node10);
+	var t11 = new $traveler(132,162,nl11,11,114, 156);
+	travelers.push(t11);
+	
+	var nl12 = [];
+	//nl12.push(new vector(200));
+	var t12 = new $traveler(132,178,nl12,12,114,173);
+	travelers.push(t12);
 	function draw(){
 		clear();
 		
@@ -301,6 +318,8 @@ window.onload=function()
 		arc(t8[0].positionX,t8[0].positionY,4,t8[0].opacity);
 		arc(t9[0].positionX,t9[0].positionY,4,t9[0].opacity);
 		arc(t10[0].positionX,t10[0].positionY,4,t10[0].opacity);
+		arc(t11[0].positionX,t11[0].positionY,4,t11[0].opacity);
+		arc(t12[0].positionX,t12[0].positionY,4,t12[0].opacity);
 		
 		moveTraveler(t);
 		moveTraveler(t2);
@@ -311,6 +330,7 @@ window.onload=function()
 		moveTraveler(t8);
 		moveTraveler(t9);
 		moveTraveler(t10);
+		moveTraveler(t11);
 	}
 	
 	//init();
