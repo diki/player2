@@ -19,11 +19,11 @@ window.onload=function()
 			img.onload = function(){
 				canvas.width = img.width;
 				canvas.height = img.height;
-				console.log("img load");
-				ctx.drawImage(this,0,0);
+				//console.log("img load");
+				//ctx.drawImage(this,0,0);
 			}
 			
-//			return setInterval(draw, 10);
+			return setInterval(draw, 10);
 	}
 	
 
@@ -206,6 +206,16 @@ window.onload=function()
 	var t3 = new $traveler(274,55,nl3,3, 271, 47);
 	travelers.push(t3);
 	
+	var nl8 = [];
+	nl8.push(new vector(250,63));
+	nl8.push(node5);
+	nl8.push(node6);
+	nl8.push(node7);
+	nl8.push(node8);
+	nl8.push(node9);
+	nl8.push(node10);
+	var t8 = new $traveler(251,55,nl8, 8, 247, 39 );
+	
 	var nl4 = [];
 	nl4.push(new vector(116,80));
 	nl4.push(new vector(127,69));
@@ -252,12 +262,34 @@ window.onload=function()
 	var t7 = new $traveler(30, 115, nl7, 7,17, 108);
 	travelers.push(t7);
 	
-	var t8 = new $traveler();
+	var nl9 = [];
+	nl9.push(new vector(173,122));
+	nl9.push(new vector(173,142));
+	nl9.push(new vector(200,162));
+	nl9.push(new vector(288,162));
+	nl9.push(new vector(288,110));
+	nl9.push(node7);
+	nl9.push(node8);
+	nl9.push(node9);
+	nl9.push(node10);
+	var t9 = new $traveler(208,121, nl9, 9, 211, 116);
+	
+	var nl10 = [];
+	nl10.push(new vector(156,125));
+	nl10.push(new vector(173,142));
+	nl10.push(new vector(200,162));
+	nl10.push(new vector(288,162));
+	nl10.push(new vector(288,110));
+	nl10.push(node7);
+	nl10.push(node8);
+	nl10.push(node9);
+	nl10.push(node10);
+	var t10 = new $traveler(156,109,nl10,10,152,93);
 	
 	function draw(){
 		clear();
 		
-		ctx.drawImage(img,0,0,canvas.width, canvas.height);
+		//ctx.drawImage(img,0,0);
 
 		arc(t[0].positionX,t[0].positionY,4,t[0].opacity);
 		arc(t2[0].positionX,t2[0].positionY,4,t2[0].opacity);
@@ -266,6 +298,9 @@ window.onload=function()
 		arc(t5[0].positionX,t5[0].positionY,4,t5[0].opacity);
 		arc(t6[0].positionX,t6[0].positionY,4,t6[0].opacity);
 		arc(t7[0].positionX,t7[0].positionY,4,t7[0].opacity);
+		arc(t8[0].positionX,t8[0].positionY,4,t8[0].opacity);
+		arc(t9[0].positionX,t9[0].positionY,4,t9[0].opacity);
+		arc(t10[0].positionX,t10[0].positionY,4,t10[0].opacity);
 		
 		moveTraveler(t);
 		moveTraveler(t2);
@@ -273,6 +308,9 @@ window.onload=function()
 		moveTraveler(t4);
 		moveTraveler(t5);
 		moveTraveler(t6);
+		moveTraveler(t8);
+		moveTraveler(t9);
+		moveTraveler(t10);
 	}
 	
 	//init();
