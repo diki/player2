@@ -300,7 +300,15 @@ window.onload=function()
 	travelers.push(t11);
 	
 	var nl12 = [];
-	//nl12.push(new vector(200));
+	nl12.push(new vector(144,178));
+	nl12.push(new vector(167,162));
+	nl12.push(new vector(200,162));
+	nl12.push(new vector(288,162));
+	nl12.push(new vector(288,110));
+	nl12.push(node7);
+	nl12.push(node8);
+	nl12.push(node9);
+	nl12.push(node10);
 	var t12 = new $traveler(132,178,nl12,12,114,173);
 	travelers.push(t12);
 	function draw(){
@@ -331,6 +339,7 @@ window.onload=function()
 		moveTraveler(t9);
 		moveTraveler(t10);
 		moveTraveler(t11);
+		moveTraveler(t12);
 	}
 	
 	//init();
