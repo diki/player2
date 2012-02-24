@@ -3,10 +3,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<link href="skin/my.skin/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+	
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
-	
+	<script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
 	<script type="text/javascript" src="canva.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 <!--	<script type="text/javascript" src="canvaobj.js"></script>-->
 	
 	
@@ -84,6 +87,57 @@ $(document).ready(function(){
 			width: 10px;
 		}
 		
+		#songInfo {
+/*			border:2px solid #F5F5F5;*/
+			margin-left:26px;
+			margin-top:377px;
+			width:427px;
+			height: 150px;
+			position:absolute;
+			padding: 8px;
+			-webkit-box-shadow: 0 8px 6px -6px #8ED6FF;
+	   		-moz-box-shadow: 0 8px 6px -6px #8ED6FF;
+	        box-shadow: 0 8px 6px -6px #8ED6FF;
+		}
+		
+		#songInfo img {
+			width: 108px;
+			height: 108px;
+			float: left;
+		}
+		
+		#songInfo #songName {
+			float: left;
+			height: 108px;
+			width: 304px;
+			color: #AEB4B5;
+		}
+		
+		#songName p {
+			float: left;
+		}
+		#songName p:first-child {
+			padding: 8px;
+			font-size: 24px;	
+		}
+		#songName div {
+			border-top: 1px solid whitesmoke;
+			padding: 8px;
+			height: 16px;
+			width: 265px;
+		}
+		
+		#songName ul {
+			list-style: none;
+		}
+		#songName ul li {
+			float: left;
+			font-weight: bold;
+			font-size: 14px;
+			cursor: pointer;
+			color: #66AABB;
+		}
+		
 		#canvas {
 		
 		}
@@ -93,13 +147,38 @@ $(document).ready(function(){
 
 	<center>
 
-		<div id="cont" style="border: 3px solid white;width: 641px; height: 592px;">
+		<div id="cont" style="width: 641px; height: 592px;">
+			<div id="songInfo" style="">
+				<img src="https://lh3.googleusercontent.com/-zLDuG18eDA8/TYB3A3l3QnI/AAAAAAAAAqs/B3eiqvrnOeE/Ott+-+Mir.jpg"/>
+				<div id="songName" style="">
+					<h3>
+						
+					</h3>
+					<h4>
+						
+					</h4>
+				</div>
+			</div>
 			<canvas id="canvas" style="background-image: url(cb2.png);"></canvas>
+			
 		</div>
 	</center>
-	<div id="real-stage">
 	</div>
 	
+	<script type="text/javascript">
+		// var validSongMarkup = "<img src='${cover}'/><div id='songName'><p>${artist}</p><br/><br/><br/><p>${song}</p><br/><br/><div>"+
+		// "<ul><li><a>></a></li><li style='margin-left: 8px;'><a>+</a></li></ul>"
+		// +"</div></div>";
+		// var s = {
+			// cover: "https://lh3.googleusercontent.com/-zLDuG18eDA8/TYB3A3l3QnI/AAAAAAAAAqs/B3eiqvrnOeE/Ott+-+Mir.jpg",
+			// artist: "Ott",
+			// song: "Squirrels and Biscuits"
+		// }
+		// $.template("validSongTemplate", validSongMarkup);
+// 		
+		// $("#songInfo").empty();
+		// $.tmpl("validSongTemplate", s).appendTo("#songInfo");		
+	</script>
 <!--	<script type="text/javascript" src="app.js"></script>-->
 </body>
 </html>

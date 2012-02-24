@@ -19,15 +19,15 @@ window.onload=function()
 			img.onload = function(){
 				canvas.width = img.width;
 				canvas.height = img.height;
-				//console.log("img load");
 				//ctx.drawImage(this,0,0);
 			}
 			
 			return setInterval(draw, 10);
 	}
 	
-
 	init();
+
+
 	var dx=1,dy=1;
 	var currentNode = 0;
 	
@@ -36,10 +36,13 @@ window.onload=function()
 		this.y=y;
 	}
 	
+
+	
 	var $traveler = function(x,y,nodeList,id,ml,mr){
+		
 		var domObj = $("<div class='station' id=st_'"+id+"' style='margin-left:"+ml+"px;"+"margin-top:"+mr+"px;"+"'></div>");
 		$("#cont").prepend(domObj);
-		console.log("sadasd")
+
 		var r = $({
 			positionX : x,
 			positionY : y,
@@ -311,35 +314,37 @@ window.onload=function()
 	nl12.push(node10);
 	var t12 = new $traveler(132,178,nl12,12,114,173);
 	travelers.push(t12);
+	
+	
 	function draw(){
 		clear();
 		
 		//ctx.drawImage(img,0,0);
 
-		arc(t[0].positionX,t[0].positionY,4,t[0].opacity);
-		arc(t2[0].positionX,t2[0].positionY,4,t2[0].opacity);
-		arc(t3[0].positionX,t3[0].positionY,4,t3[0].opacity);
-		arc(t4[0].positionX,t4[0].positionY,4,t4[0].opacity);
-		arc(t5[0].positionX,t5[0].positionY,4,t5[0].opacity);
-		arc(t6[0].positionX,t6[0].positionY,4,t6[0].opacity);
-		arc(t7[0].positionX,t7[0].positionY,4,t7[0].opacity);
-		arc(t8[0].positionX,t8[0].positionY,4,t8[0].opacity);
-		arc(t9[0].positionX,t9[0].positionY,4,t9[0].opacity);
-		arc(t10[0].positionX,t10[0].positionY,4,t10[0].opacity);
-		arc(t11[0].positionX,t11[0].positionY,4,t11[0].opacity);
-		arc(t12[0].positionX,t12[0].positionY,4,t12[0].opacity);
-		
-		moveTraveler(t);
-		moveTraveler(t2);
-		moveTraveler(t3);
-		moveTraveler(t4);
-		moveTraveler(t5);
-		moveTraveler(t6);
-		moveTraveler(t8);
-		moveTraveler(t9);
-		moveTraveler(t10);
-		moveTraveler(t11);
-		moveTraveler(t12);
+		// arc(t[0].positionX,t[0].positionY,4,t[0].opacity);
+		// arc(t2[0].positionX,t2[0].positionY,4,t2[0].opacity);
+		// arc(t3[0].positionX,t3[0].positionY,4,t3[0].opacity);
+		// arc(t4[0].positionX,t4[0].positionY,4,t4[0].opacity);
+		// arc(t5[0].positionX,t5[0].positionY,4,t5[0].opacity);
+		// arc(t6[0].positionX,t6[0].positionY,4,t6[0].opacity);
+		// arc(t7[0].positionX,t7[0].positionY,4,t7[0].opacity);
+		// arc(t8[0].positionX,t8[0].positionY,4,t8[0].opacity);
+		// arc(t9[0].positionX,t9[0].positionY,4,t9[0].opacity);
+		// arc(t10[0].positionX,t10[0].positionY,4,t10[0].opacity);
+		// arc(t11[0].positionX,t11[0].positionY,4,t11[0].opacity);
+		// arc(t12[0].positionX,t12[0].positionY,4,t12[0].opacity);
+// 		
+		// moveTraveler(t);
+		// moveTraveler(t2);
+		// moveTraveler(t3);
+		// moveTraveler(t4);
+		// moveTraveler(t5);
+		// moveTraveler(t6);
+		// moveTraveler(t8);
+		// moveTraveler(t9);
+		// moveTraveler(t10);
+		// moveTraveler(t11);
+		// moveTraveler(t12);
 	}
 	
 	//init();
