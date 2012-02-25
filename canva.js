@@ -19,7 +19,7 @@ window.onload=function()
 			img.onload = function(){
 				canvas.width = img.width;
 				canvas.height = img.height;
-				//ctx.drawImage(this,0,0);
+				ctx.drawImage(this,0,0);
 			}
 			
 			return setInterval(draw, 10);
@@ -40,8 +40,8 @@ window.onload=function()
 	
 	var $traveler = function(x,y,nodeList,id,ml,mr){
 		
-		var domObj = $("<div class='station' id=st_'"+id+"' style='margin-left:"+ml+"px;"+"margin-top:"+mr+"px;"+"'></div>");
-		$("#cont").prepend(domObj);
+//		var domObj = $("<div class='station' id=st_'"+id+"' style='margin-left:"+ml+"px;"+"margin-top:"+mr+"px;"+"'></div>");
+//		$("#cont").prepend(domObj);
 
 		var r = $({
 			positionX : x,
