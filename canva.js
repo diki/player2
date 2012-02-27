@@ -3,11 +3,28 @@ window.onload=function()
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 	
+	
+
+	
 	var W_WIDTH = screen.width;
 	var W_HEIGHT = screen.height;
 	
-	canvas.width = W_WIDTH/4;
-	canvas.height = W_HEIGHT*0.5;
+	
+	
+	console.log(W_WIDTH, W_HEIGHT);
+	
+	canvas.width = W_WIDTH/2;
+	canvas.height = W_HEIGHT*(5/6);
+	
+	/**
+	 * image sizes:
+	 * width: 641
+	 * height: 592
+	 */
+	
+	this.stHeightPr = canvas.height/592;
+	this.stWidthPr = canvas.width/641;
+	
 	
 	var container = $("#container");
 	container.append(canvas);
@@ -17,12 +34,13 @@ window.onload=function()
 	
 	function init() {
 			img.onload = function(){
-				canvas.width = img.width;
-				canvas.height = img.height;
-				ctx.drawImage(this,0,0);
-			}
+				//canvas.width = img.width*2;
+				//canvas.height = img.height*2;
+				console.log(img.width, img.height);
+				ctx.drawImage(this, 0,0, canvas.width, canvas.height);
+			} 
 			
-			return setInterval(draw, 10);
+			//return setInterval(draw, 10);
 	}
 	
 	init();
